@@ -182,56 +182,7 @@ body::before{
 .nav-dropdown-item.active{color:#7db8e8;background:rgba(125,184,232,.08)}
 .nav-dd-num{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:rgba(125,184,232,.85);min-width:18px;padding-top:3px;font-weight:500;text-align:center}
 .nav-dd-title{font-size:.83rem;line-height:1.45;flex:1}
-.sidebar-foot{
-  position:relative;
-  padding:.45rem 1.15rem;
-  border:1px solid rgba(255,255,255,.09);
-  display:flex;flex-direction:row;align-items:center;justify-content:center;flex-shrink:0;
-  background:
-    radial-gradient(ellipse at center, rgba(125,184,232,.08) 0%, rgba(125,184,232,0) 65%),
-    linear-gradient(135deg, rgba(229,185,32,.045) 0%, rgba(201,48,46,.025) 55%, rgba(125,184,232,.04) 100%);
-  border-radius:999px;
-  margin-left:.5rem;
-  transition:background var(--t),border-color var(--t),box-shadow var(--t),transform .35s cubic-bezier(.22,.8,.26,1);
-  box-shadow:
-    inset 0 0 10px rgba(125,184,232,.05),
-    0 1px 2px rgba(0,0,0,.22);
-  overflow:hidden;
-}
-.sidebar-foot::before{
-  content:'';position:absolute;inset:0;border-radius:inherit;
-  background:radial-gradient(ellipse at 30% 30%, rgba(246,244,239,.05) 0%, transparent 60%);
-  pointer-events:none;
-}
-.sidebar-foot:hover{
-  border-color:rgba(125,184,232,.28);
-  box-shadow:
-    inset 0 0 14px rgba(125,184,232,.1),
-    0 4px 14px rgba(125,184,232,.12),
-    0 0 0 1px rgba(125,184,232,.15);
-  transform:translateY(-1px);
-}
-.gencat-logo{
-  height:32px;width:auto;display:block;flex-shrink:0;
-  filter:
-    saturate(.82)
-    brightness(1.08)
-    contrast(1.04)
-    drop-shadow(0 0 5px rgba(125,184,232,.22))
-    drop-shadow(0 1px 1px rgba(0,0,0,.45));
-  transition:filter .4s cubic-bezier(.22,.8,.26,1),transform .4s cubic-bezier(.22,.8,.26,1);
-  position:relative;z-index:1;
-}
-.sidebar-foot:hover .gencat-logo{
-  filter:
-    saturate(1)
-    brightness(1.14)
-    contrast(1.06)
-    drop-shadow(0 0 8px rgba(125,184,232,.38))
-    drop-shadow(0 0 12px rgba(229,185,32,.18))
-    drop-shadow(0 1px 1px rgba(0,0,0,.45));
-  transform:scale(1.05) rotate(-1.5deg);
-}
+.sidebar-foot{padding:.4rem .95rem;border:none;font-family:var(--mono);font-size:.6rem;color:rgba(246,244,239,.4);line-height:1.25;display:flex;flex-direction:column;justify-content:center;flex-shrink:0;text-align:right;background:rgba(255,255,255,.06);border-radius:999px;letter-spacing:.05em;text-transform:uppercase;margin-left:.5rem}
 
 /* mobile menu toggle (hidden on desktop) */
 .nav-toggle{display:none;background:none;border:none;color:#f6f4ef;cursor:pointer;padding:0 1rem;font-size:1.3rem;height:100%;align-items:center}
@@ -706,9 +657,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
   .sidebar-brand{min-width:auto;padding:0 .75rem 0 0}
   .sidebar-brand h1{font-size:.92rem}
   .sidebar-brand .kicker{display:none}
-  .sidebar-foot{padding:.35rem .75rem;margin-left:.35rem}
-  .gencat-logo{height:26px}
-  .sidebar-foot:hover{transform:none}
+  .sidebar-foot{display:none}
   .nav-link{font-size:.78rem;padding:.45rem .75rem}
   .nav-dropdown-menu{min-width:260px}
   .exec-summary{padding:2.5rem 1.25rem 1rem}
@@ -808,9 +757,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       </div>
     </div>
   </div>
-  <div class="sidebar-foot" role="img" aria-label="Generalitat de Catalunya">
-    <img class="gencat-logo" src="https://images.seeklogo.com/logo-png/48/1/generalitat-de-catalunya-logo-png_seeklogo-481374.png" alt="Generalitat de Catalunya" loading="lazy" referrerpolicy="no-referrer">
-  </div>
+  <div class="sidebar-foot">Generalitat<br>de Catalunya</div>
 </nav>
 
 <div id="progress-bar" aria-hidden="true"></div>
